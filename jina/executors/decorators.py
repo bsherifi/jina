@@ -202,9 +202,6 @@ def _get_total_size(full_data_size, batch_size, num_batch):
 def _merge_results_after_batching(
     final_result, merge_over_axis: int = 0, flatten: bool = True
 ):
-    if len(final_result) == 1:
-        # the only result of one batch
-        return final_result[0]
 
     if final_result:
         if isinstance(final_result[0], np.ndarray):
